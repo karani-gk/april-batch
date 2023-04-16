@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{ticket_number}-{inspecting_engineer}",
+ "creation": "2023-04-15 19:30:20.950501",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket_number",
+  "vehicle_reg",
+  "column_break_1wdpg",
+  "inspecting_engineer",
+  "amended_from",
+  "required_services_section",
+  "required_services_detail",
+  "spare_parts_section",
+  "required_spare_parts"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket_number",
+   "fieldtype": "Link",
+   "label": "Ticket Number",
+   "options": "Parking Ticket"
+  },
+  {
+   "fieldname": "inspecting_engineer",
+   "fieldtype": "Link",
+   "label": "Inspecting Engineer",
+   "options": "User"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle Inspection",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1wdpg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ticket_number.vehicle",
+   "fieldname": "vehicle_reg",
+   "fieldtype": "Data",
+   "label": "Vehicle Reg",
+   "read_only": 1
+  },
+  {
+   "fieldname": "required_services_section",
+   "fieldtype": "Section Break",
+   "label": "Required Services"
+  },
+  {
+   "fieldname": "required_services_detail",
+   "fieldtype": "Table",
+   "label": "Required Services Detail",
+   "options": "Required Service Detail"
+  },
+  {
+   "fieldname": "spare_parts_section",
+   "fieldtype": "Section Break",
+   "label": "Spare Parts"
+  },
+  {
+   "fieldname": "required_spare_parts",
+   "fieldtype": "Table",
+   "label": "Required Spare Parts",
+   "options": "Required Spare Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-15 20:25:12.203170",
+ "modified_by": "Administrator",
+ "module": "Service Station",
+ "name": "Vehicle Inspection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

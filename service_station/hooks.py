@@ -188,3 +188,8 @@ user_data_fields = [
 #	"service_station.auth.validate"
 # ]
 
+
+
+fixtures = [
+	"Custom Field"
+]
